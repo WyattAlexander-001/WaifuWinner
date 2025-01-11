@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlusfp2p33q4h"]
+
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_jegsu"]
+[ext_resource type="Texture2D" uid="uid://df4otmsspane0" path="res://Textures/Enemy/kolbold_weak.png" id="1_stxu0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ghpo6"]
+radius = 6.0
+height = 24.0
+
+[node name="enemy_kobold_weak" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_jegsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_stxu0")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_ghpo6")
